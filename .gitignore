@@ -1,0 +1,33 @@
+# Ignore virtual environment
+.venv/
+env/
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore data files that may change or contain sensitive information
+data/*.csv
+
+# Ignore model files (binary files)
+models/
+
+# Ignore generated outputs and reports
+output/
+reports/
+
+# Ignore environment configuration files
+pyvenv.cfg
+
+# Ignore dependencies (if using virtual environments)
+Lib/
+Include/
+Scripts/
+
+# Ignore logs and cache files
+*.log
+*.cache
+
+# Ignore VSCode workspace settings
+.vscode/
