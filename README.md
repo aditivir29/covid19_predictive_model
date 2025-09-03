@@ -1,6 +1,10 @@
 # COVID-19 Predictive Model
 
+[![Python](https://img.shields.io/badge/python-3.8+-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
 A Python-based predictive model to analyze and forecast COVID-19 trends. This project leverages data science techniques to help understand pandemic progression and generate insights from real-world datasets.
+
 
 ## 🔍 Features
 - Time-series analysis of COVID-19 cases.
@@ -8,12 +12,14 @@ A Python-based predictive model to analyze and forecast COVID-19 trends. This pr
 - Visualization of historical and forecasted trends.
 - Easy-to-use Python scripts for data processing and prediction.
 
+
 ## 🛠️ Technologies Used
 - Python
 - Pandas, NumPy
 - Scikit-learn
 - Matplotlib, Seaborn
 - Jupyter Notebook
+
 
 ## 📂 Project Structure
 covid19_predictive_model/
@@ -23,41 +29,34 @@ covid19_predictive_model/
 ├── requirements.txt # Project dependencies
 └── README.md
 
-markdown
-Copy code
-
 ## 🚀 Getting Started
 
 ### Prerequisites
 - Python 3.8+
 - Jupyter Notebook
-- Required packages: `pip install -r requirements.txt`
-
-### Usage
-1. Clone the repository:
+- Required packages:  
 ```bash
+pip install -r requirements.txt
+
+Usage
+
+1. Clone the repository:
 git clone https://github.com/aditivir29/covid19_predictive_model.git
 cd covid19_predictive_model
-Launch Jupyter Notebook:
 
-bash
-Copy code
+2. Launch Jupyter Notebook:
 jupyter notebook
-Open the notebook covid19_analysis.ipynb and run the cells step-by-step.
+
+3. Open covid19_analysis.ipynb and run the cells step-by-step.
 
 📈 Results
+
 Visualizations of COVID-19 trends (cases, recoveries, deaths).
-
 Model predictions with performance metrics (accuracy, RMSE, etc.).
-
 Insights into peak infection periods and growth rates.
 
 📝 Future Enhancements
+
 Integrate real-time data from APIs.
-
 Add more advanced predictive models (e.g., LSTM, Prophet).
-
 Build a web dashboard for visualization.
-
-📜 License
-This project is licensed under MIT License. See LICENSE for details.
