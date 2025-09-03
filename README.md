@@ -1,140 +1,63 @@
-# COVID-19 Predictive Model: Data Pipeline for Indian States and Union Territories
+# COVID-19 Predictive Model
 
-## Overview
-This project implements a machine learning-based approach to predict COVID-19 case numbers across Indian states and union territories using historical data, demographic information, and calculated health metrics. The data pipeline includes preprocessing, exploratory data analysis, model training, and prediction generation.
+A Python-based predictive model to analyze and forecast COVID-19 trends. This project leverages data science techniques to help understand pandemic progression and generate insights from real-world datasets.
 
-## Project Structure
-```
-COVID19_PREDICTIVE_MODEL/
-├── .venv/  # Python virtual environment
-├── data/
-│   ├── covid_19_india.csv  # Raw COVID-19 data for India
-│   ├── covid_vaccine_statewise.csv  # Vaccination data by state
-│   ├── datafile.csv  # Health and demographic data
-│   ├── predicted_vs_actual.csv  # Comparison of predictions with actual data
-│   ├── processed_data.csv  # Cleaned and feature-engineered data
-│   ├── StatewiseTestingDetails.csv  # Testing data by state
-├── env/  # Environment configuration
-├── models/
-│   ├── covid_model_improved.pkl  # Improved prediction model
-│   ├── covid_model.pkl  # Base prediction model
-│   └── feature_names.pkl  # Model feature names
-├── output/
-│   ├── case_growth_trend.png
-│   ├── cases_by_state.png
-│   ├── correlation_heatmap.png
-│   ├── feature_importance.png
-│   ├── positivity_vs_growth.png
-│   ├── predictions.csv  # Generated predictions
-│   └── testing_positivity_distribution.png
-├── reports/
-│   └── Social Impact Report on COVID.pdf  # Analysis report
-├── src/
-│   ├── eda.py  # Exploratory data analysis and visualization
-│   ├── predict.py  # Generating future predictions
-│   ├── preprocess.py  # Data cleaning and feature engineering
-│   ├── train_model.py  # Model training and evaluation
-│   └── run_pipeline.py  # Script to run the complete pipeline
-├── .gitignore
-├── README.md
-└── requirements.txt  # Project dependencies
-```
+## 🔍 Features
+- Time-series analysis of COVID-19 cases.
+- Predictive modeling using machine learning algorithms.
+- Visualization of historical and forecasted trends.
+- Easy-to-use Python scripts for data processing and prediction.
 
-## Features
-### Data Preprocessing
-- Cleans raw data from `covid_19_india.csv`, `StatewiseTestingDetails.csv`, `covid_vaccine_statewise.csv`, and `datafile.csv`
-- Handles missing values
-- Engineers features such as case growth rate and testing positivity rate
+## 🛠️ Technologies Used
+- Python
+- Pandas, NumPy
+- Scikit-learn
+- Matplotlib, Seaborn
+- Jupyter Notebook
 
-### Exploratory Data Analysis
-- Generates visualizations to understand COVID-19 trends and patterns
+## 📂 Project Structure
+covid19_predictive_model/
+├── data/ # CSV datasets used for training and testing
+├── notebooks/ # Jupyter notebooks for analysis and model development
+├── models/ # Trained machine learning models
+├── requirements.txt # Project dependencies
+└── README.md
 
-### Model Training
-- Implements a machine learning model to predict new COVID-19 cases
+markdown
+Copy code
 
-### Prediction Generation
-- Forecasts future COVID-19 cases for Indian states and union territories
+## 🚀 Getting Started
 
-## Key Features Used in Modeling
-- **Case Growth Rate** (from `covid_19_india.csv`)
-- **Testing Positivity Rate** (from `StatewiseTestingDetails.csv`)
-- **Demographic Information** (from `datafile.csv`, e.g., Youth Population %, Women Tobacco Use %)
-- **Vaccination Effectiveness Estimates** (from `covid_vaccine_statewise.csv`)
-- **Temporal Features** (Month, Week, Day of week, Days since pandemic start)
-
-## Usage
 ### Prerequisites
-- Python 3.6+
-- Dependencies listed in `requirements.txt`
+- Python 3.8+
+- Jupyter Notebook
+- Required packages: `pip install -r requirements.txt`
 
-### Installation
-Clone the repository:
-```
-git clone <repository-url>
-cd COVID19_PREDICTIVE_MODEL
-```
-Create and activate a virtual environment:
-```
-python -m venv .venv
-# Windows:
-.venv\Scripts\activate
-# Linux/Mac:
-source .venv/bin/activate
-```
-Install dependencies:
-```
-pip install -r requirements.txt
-```
+### Usage
+1. Clone the repository:
+```bash
+git clone https://github.com/aditivir29/covid19_predictive_model.git
+cd covid19_predictive_model
+Launch Jupyter Notebook:
 
-### Running the Pipeline
-Run individual components:
-```
-python src/preprocess.py   # Data Preprocessing
-python src/eda.py          # Exploratory Data Analysis
-python src/train_model.py  # Model Training
-python src/predict.py      # Generate Predictions
-```
-Or run the entire pipeline:
-```
-python src/run_pipeline.py
-```
+bash
+Copy code
+jupyter notebook
+Open the notebook covid19_analysis.ipynb and run the cells step-by-step.
 
-## Model Performance
-- **Test RMSE:** 23.41
-- **Test R²:** 0.9997
-- **Test MAE:** 1.46
+📈 Results
+Visualizations of COVID-19 trends (cases, recoveries, deaths).
 
-### Feature Importance
-- **Testing Positivity Rate:** 90.11%
-- **Case Growth Rate:** 8.60%
-- **Days Since Pandemic Start:** 1.25%
-- **Other Features:** <0.1% each
+Model predictions with performance metrics (accuracy, RMSE, etc.).
 
-## Visualizations
-The project generates multiple visual insights:
-- Case growth trends over time
-- Cases by state comparison
-- Feature correlation heatmap
-- Feature importance chart
-- Positivity rate vs. growth rate analysis
-- Testing positivity distribution
+Insights into peak infection periods and growth rates.
 
-## Social Impact Report
-A comprehensive **Social Impact Report** (available in the `reports/` folder) covers:
-- Societal impact of COVID-19 across Indian states and demographics
-- Role of predictive modeling in public health decision-making
-- Suggested interventions based on predictive insights
-- Recommendations for resource allocation in high-risk areas
-- Long-term implications for health infrastructure planning
+📝 Future Enhancements
+Integrate real-time data from APIs.
 
-## Notes
-- Uses the latest 46 data points for forecasting
-- Predicts state-wise COVID-19 cases for upcoming days
-- Estimates testing positivity rate when direct data is unavailable
+Add more advanced predictive models (e.g., LSTM, Prophet).
 
-## Future Improvements
-- Integration of more detailed vaccination data
-- Incorporation of mobility data to capture population movement effects
-- Implementation of advanced time series models
-- Development of regional sub-models for targeted predictions
+Build a web dashboard for visualization.
 
+📜 License
+This project is licensed under MIT License. See LICENSE for details.
